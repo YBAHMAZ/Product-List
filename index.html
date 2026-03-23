@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta id="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oxanium:wght@200..800&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+	<link rel="icon" href="./images/icon-add-to-cart.svg">
+	<link rel="stylesheet" href="style.css">
+	<title>Product list</title>
+</head>
+
+<body>
+	<main>
+		<section>
+			<h1>Desserts</h1>
+			<div class="products-list"></div>
+		</section>
+		<div class="cart">
+			<h3>Your Cart (0)</h3>
+			<div class="empty-cart">
+				<img width="100" src="./images/illustration-empty-cart.svg" alt="empty-cart">
+				<p>Your added items will appear here</p>
+			</div>
+			<div class="orders">
+				<div class="total">
+					<p>Order Total</p>
+					<b class="total-price">0</b>
+				</div>
+				<div class="delivery">
+					<img src="./images/icon-carbon-neutral.svg" alt="icon-carbon-neutral">
+					<p>This is a <b>carbon-neutral</b> delivery</p>
+				</div>
+				<button id="confirm">Confirm Order</button>
+			</div>
+		</div>
+	</main>
+	<div class="div-popup">
+		<div class="popup">
+			<img src="./images/icon-order-confirmed.svg" alt="icon-order-confirmed">
+			<h1>Order Confirmed</h1>
+			<p>We hope you enjoy your food!</p>
+			<div class="confirmed">
+				<div class="total">
+					<p>Order Total</p>
+					<b class="total-price">$5.50</b>
+				</div>
+			</div>
+			<button id="restart" onclick="location.reload()">Start New Order</button>
+		</div>
+	</div>
+	<script src="./js/intitalData.js"></script>
+	<script src="./js/events.js"></script>
+</body>
+
+</html>

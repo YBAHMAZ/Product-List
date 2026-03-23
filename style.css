@@ -1,0 +1,301 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Comic Relief", system-ui;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	background-color: #f5f6fc;
+	position: relative;
+}
+
+main {
+	width: 100%;
+	padding: 50px;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 50px;
+}
+
+main section {
+	width: 550px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 30px;
+}
+
+.products-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.product {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.pic {
+	position: relative;
+}
+
+.pic img {
+	border-radius: 7px;
+}
+
+.add-cart,
+.nbr-products {
+	width: 110px;
+	position: absolute;
+	bottom: -10px;
+	right: 50%;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #fff;
+	padding: 5px 0px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	/* gap: 5px; */
+	border: #c9aea6 solid 1px;
+	border-radius: 20px;
+	font-size: x-small;
+	font-weight: 600;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.add-cart:hover {
+	border-color: #c73a0f;
+}
+
+
+.add-cart img {
+	width: 15px;
+}
+
+.nbr-products {
+	display: none;
+	background-color: #c73a0f;
+	border-color: #c73a0f;
+	justify-content: space-around;
+	color: #fff;
+	font-size: 10px;
+	cursor: default;
+}
+
+.nbr-products img {
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
+	outline: solid 1px #fff;
+	border: solid 3px transparent;
+}
+
+
+.product .content h5 {
+	font-size: 11px;
+	font-weight: 500;
+	color: #888;
+}
+
+.product .content h4 {
+	font-size: 12px;
+}
+
+.product .content span {
+	font-size: 11px;
+	color: #c73a0f;
+	font-weight: 600;
+}
+
+.cart {
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 350px;
+	padding: 20px;
+	border-radius: 7px;
+	height: fit-content;
+}
+
+.cart .orders {
+	width: 100%;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+}
+
+.cart h3 {
+	color: #c73a0f;
+}
+
+.cart .empty-cart {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 20px;
+	font-size: 12px;
+}
+
+.cart .item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: end;
+	gap: 10px;
+}
+
+.item h5 {
+	font-weight: normal;
+	width: 100%;
+	text-align: left;
+}
+
+.item img {
+	width: 15px;
+	cursor: pointer;
+	outline: solid 2px #c9aea6;
+	border: solid 2px transparent;
+	border-radius: 10px;
+}
+
+hr {
+	border: dashed 1px #ead9d4;
+}
+
+.item .prices {
+	width: 100%;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 20px;
+}
+
+.item .prices .nb-times {
+	color: #c73a0f;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.item .prices .p-original {
+	color: #b79c93;
+}
+
+.item .prices .all-price {
+	color: #888;
+}
+
+.total {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 40px;
+}
+
+.cart .delivery {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	gap: 10px;
+	height: 40px;
+	background-color: #f5f6fc;
+}
+
+.cart .delivery p {
+	font-size: 12px;
+}
+
+button {
+	background-color: #c73a0f;
+	border: none;
+	height: 50px;
+	color: #fff;
+	border-radius: 25px;
+	cursor: pointer;
+	font-weight: 500;
+}
+
+.div-popup {
+	width: 100%;
+	height: 100%;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	/* top: 0; */
+	bottom: 0;
+	background-color: #888888d9;
+}
+
+.div-popup .popup {
+	width: 450px;
+	padding: 25px;
+	background-color: #fff;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 20px;
+}
+
+.popup img {
+	width: 60px;
+}
+
+.popup .confirmed {
+	background-color: #fff2ed;
+	border-radius: 10px;
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.item-confirmed {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+}
+
+.item-confirmed img {
+	border-radius: 5px;
+}
+
+.item-confirmed div {
+	flex-grow: 1;
+}
+
+.item-confirmed div span:nth-child(2) {
+	color: #c73a0f;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.item-confirmed div span:nth-child(3) {
+	font-size: 12px;
+	margin-left: 20px;
+}
+
+.item-confirmed div h6 {
+	font-weight: normal;
+}
+
+.popup button {
+	width: 100%;
+}
